@@ -40,7 +40,7 @@ const Register = () => {
       </form>
       <p className="text-center mt-3 text-[15px]">
         Já possui uma conta?{" "}
-        <Link to="/login" className="text-blue-510">
+        <Link to="/" className="text-blue-510">
           Faza o login aqui
         </Link>
       </p>

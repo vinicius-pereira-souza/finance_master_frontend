@@ -12,9 +12,12 @@ export default {
         "gray-30": "#FAFAFA",
         "gray-68": "#F2F5FA",
         "gray-70": "#F6F7F9",
+        "gray-65": "#F5F5F5",
         "gray-690": "#646A7C",
         "zinc-930": "#121212",
         "blue-510": "#4036F6",
+        "blue-945": "#1C274E",
+        "blue-980": "#0D1639",
       },
       boxShadow: {
         "bsh-card": "0 4px 4px 0 rgba(0, 0, 0, 25%)",
