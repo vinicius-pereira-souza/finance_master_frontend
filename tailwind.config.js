@@ -10,6 +10,7 @@ export default {
         "red-485": "#F54949",
         "green-370": "#5AD178",
         "gray-30": "#FAFAFA",
+        "gray-68": "#F2F5FA",
         "gray-70": "#F6F7F9",
         "gray-690": "#646A7C",
         "zinc-930": "#121212",

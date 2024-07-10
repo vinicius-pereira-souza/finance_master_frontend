@@ -11,7 +11,7 @@ const LayoutPublic = () => {
         </div>
       </header>
       <div className="py-[25px] px-5">
-        <div className="container_center min-h-[80vh] mt-24">
+        <div className="container_center min-h-[80vh] mt-12">
           <Outlet />
         </div>
       </div>
