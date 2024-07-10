@@ -1,17 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
 
 // pages
-import Login from "../pages/login";
-import Register from "../pages/register";
+// import Login from "../pages/login";
+// import Register from "../pages/register";
+
+// components
+import HeaderPublic from "../components/headerPublic";
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <Login />,
-  },
-  {
-    path: "/register",
-    element: <Register />,
+    element: <HeaderPublic />,
   },
 ]);
 

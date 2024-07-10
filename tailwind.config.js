@@ -14,6 +14,9 @@ export default {
         "gray-690": "#646A7C",
         "zinc-930": "#121212",
       },
+      boxShadow: {
+        "bsh-card": "0 4px 4px 0 rgba(0, 0, 0, 25%)",
+      },
     },
   },
   plugins: [],

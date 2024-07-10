@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .container_center {
+    @apply max-w-[1096px] mx-auto;
+  }
+}
+
+@layer base {
+  * {
+    font-family: "Karla", sans-serif;
+  }
+
+  body {
+    @apply bg-gray-70;
+  }
+}
