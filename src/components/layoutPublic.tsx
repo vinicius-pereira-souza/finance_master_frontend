@@ -10,10 +10,9 @@ const LayoutPublic = () => {
           </Link>
         </div>
       </header>
-      <div className="py-[25px] px-5">
-        <div className="container_center min-h-[80vh] mt-12">
-          <Outlet />
-        </div>
+      <div className="min-h-screen mt-12 px-5">
+        <div className="container_center"></div>
+        <Outlet />
       </div>
     </main>
   );

@@ -1,11 +1,11 @@
+import { Link } from "react-router-dom";
 // components
-
 import Input from "../components/form/input";
 import BtnSubmit from "../components/form/btnSubmit";
 
 const Login = () => {
   return (
-    <div className="block max-w-[400px] mx-auto">
+    <div className="max-w-[400px] mx-auto">
       <h1 className="text-center text-[25px] mb-11">Login</h1>
       <form>
         <Input
@@ -24,6 +24,12 @@ const Login = () => {
         />
         <BtnSubmit text="Entrar" />
       </form>
+      <p className="text-center mt-3 text-[15px]">
+        Ainda não possui uma conta?{" "}
+        <Link to="/register" className="text-blue-510">
+          Cadastre-se aqui
+        </Link>
+      </p>
     </div>
   );
 };
