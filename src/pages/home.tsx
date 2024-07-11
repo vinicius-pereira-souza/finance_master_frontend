@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 // components
 import Title from "../components/template/title";
 import Card from "../components/home/card";
@@ -16,48 +18,54 @@ interface Item {
   value: number;
 }
 
+const list: Array<Item> = [
+  {
+    id: Math.random(),
+    title: "Mercado",
+    date: "11-07-2024",
+    status: "saida",
+    value: 100,
+  },
+  {
+    id: Math.random(),
+    title: "Salario",
+    date: "30-07-2024",
+    status: "entrada",
+    value: 1500,
+  },
+  {
+    id: Math.random(),
+    title: "livraria",
+    date: "10-05-2024",
+    status: "saida",
+    value: 25,
+  },
+  {
+    id: Math.random(),
+    title: "Mercado",
+    date: "11-08-2024",
+    status: "saida",
+    value: 250,
+  },
+  {
+    id: Math.random(),
+    title: "Gasolina",
+    date: "11-07-2024",
+    status: "saida",
+    value: 100,
+  },
+];
+
 const Home = () => {
-  const list: Array<Item> = [
-    {
-      id: Math.random(),
-      title: "Mercado",
-      date: "11-07-2024",
-      status: "saida",
-      value: 100,
-    },
-    {
-      id: Math.random(),
-      title: "Salario",
-      date: "30-07-2024",
-      status: "entrada",
-      value: 1500,
-    },
-    {
-      id: Math.random(),
-      title: "livraria",
-      date: "10-05-2024",
-      status: "saida",
-      value: 25,
-    },
-    {
-      id: Math.random(),
-      title: "Mercado",
-      date: "11-08-2024",
-      status: "saida",
-      value: 250,
-    },
-    {
-      id: Math.random(),
-      title: "Gasolina",
-      date: "11-07-2024",
-      status: "saida",
-      value: 100,
-    },
-  ];
+  const [openModel, setOpenModel] = useState<boolean>(false);
+
+  const toggleOpenModel = (): void => {
+    setOpenModel(!openModel);
+  };
 
   return (
     <div className="pb-20">
-      <Modal />
+      <Modal closeModel={toggleOpenModel} state={openModel} />
       <Title title="Home" subtitle="Veja seus mais novos transações" />
       <div className="mt-16 grid lg:grid-cols-3">
         <Card title="Valor na conta" icon={<LuWallet />} value={1500} />
@@ -75,6 +83,7 @@ const Home = () => {
       <div className="flex items-center gap-4 my-9">
         <span className="flex-1 block h-[1px] bg-gray-72"></span>
         <button
+          onClick={toggleOpenModel}
           className="text-white bg-purple-550 hover:bg-purple-810 
         transition-all rounded-lg p-[16px] flex items-center gap-3"
         >

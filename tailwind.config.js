@@ -19,6 +19,7 @@ export default {
         "blue-510": "#4036F6",
         "blue-945": "#1C274E",
         "blue-980": "#0D1639",
+        modal: "rgba(0, 0, 0, 25%)",
       },
       boxShadow: {
         "bsh-card": "0 4px 4px 0 rgba(0, 0, 0, 25%)",
