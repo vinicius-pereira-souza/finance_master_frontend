@@ -6,8 +6,10 @@ type Props = {
 const Title = ({ title, subtitle }: Props) => {
   return (
     <>
-      <h1 className="text-white font-bold text-[32px] leading-none">{title}</h1>
-      <h2 className="text-gray-690">{subtitle}</h2>
+      <h1 className="text-white font-bold text-25 lg:text-32 leading-none mt-10 lg:mt-9">
+        {title}
+      </h1>
+      <h2 className="text-gray-690 text-base">{subtitle}</h2>
     </>
   );
 };

@@ -67,7 +67,7 @@ const Home = () => {
     <div className="pb-20">
       <Modal closeModel={toggleOpenModel} state={openModel} />
       <Title title="Home" subtitle="Veja seus mais novos transações" />
-      <div className="mt-16 grid lg:grid-cols-3">
+      <div className="mt-7 lg:mt-10 grid grid-cols-1 gap-4 lg:grid-cols-3">
         <Card title="Valor na conta" icon={<LuWallet />} value={1500} />
         <Card
           title="Valor de entrada"
@@ -80,14 +80,14 @@ const Home = () => {
           value={30}
         />
       </div>
-      <div className="flex items-center gap-4 my-9">
+      <div className="flex items-center gap-4 mt-0 mb-4 sm:my-9">
         <span className="flex-1 block h-[1px] bg-gray-72"></span>
         <button
           onClick={toggleOpenModel}
           className="text-white bg-purple-550 hover:bg-purple-810 
-        transition-all rounded-lg p-[16px] flex items-center gap-3"
+        transition-all rounded-lg text-20 p-2 lg:text-base sm:p-4 flex items-center gap-3"
         >
-          <LuPlus /> Adicionar
+          <LuPlus /> <span className="hidden ms:block">Adicionar</span>
         </button>
       </div>
       <div className="bg-white rounded-[10px] shadow-bsh-card">

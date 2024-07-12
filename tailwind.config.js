@@ -27,6 +27,12 @@ export default {
       fontFamily: {
         archivo: ["Archivo", "sans-serif"],
       },
+      fontSize: {
+        14: "14px",
+        20: "20px",
+        25: "25px",
+        32: "32px",
+      },
       maxWidth: {
         tablet: "720px",
         desktop: "1096px",
