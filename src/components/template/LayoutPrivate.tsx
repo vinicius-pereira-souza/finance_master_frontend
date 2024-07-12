@@ -1,7 +1,7 @@
 import { Outlet, NavLink, Link } from "react-router-dom";
-import img from "../assets/imagem-de-usuario.png";
+import img from "../../assets/imagem-de-usuario.png";
 
-const LayoutRoot = () => {
+const LayoutPrivate = () => {
   return (
     <main className="relative">
       <div className="absolute top-0 left-0 w-full h-[268px] bg-blue-980 z-[-10]"></div>
@@ -52,4 +52,4 @@ const LayoutRoot = () => {
   );
 };
 
-export default LayoutRoot;
+export default LayoutPrivate;

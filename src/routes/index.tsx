@@ -1,15 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 
 // pages
-import Login from "../pages/login";
-import Register from "../pages/register";
-import Home from "../pages/home";
-import Transections from "../pages/transections";
-import Profile from "../pages/profile";
+import Login from "../app/Login";
+import Register from "../app/Register";
+import Home from "../app/Home";
+import Transections from "../app/Transections";
+import Profile from "../app/Profile";
 
 // components
-import LayoutPublic from "../components/layout";
-import LayoutRoot from "../components/layoutRoot";
+import LayoutPublic from "../components/template/LayoutPublic";
+import LayoutPrivate from "../components/template/LayoutPrivate";
 
 const privateRoutes = () => {
   let routes = {};
@@ -17,7 +17,7 @@ const privateRoutes = () => {
   if (localStorage.getItem("token")) {
     routes = {
       path: "/",
-      element: <LayoutRoot />,
+      element: <LayoutPrivate />,
       children: [
         {
           path: "/",

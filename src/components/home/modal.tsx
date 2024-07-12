@@ -1,7 +1,7 @@
 import { LuX } from "react-icons/lu";
 
 // components
-import Input from "../form/input";
+import Input from "../form/Input";
 
 type Props = {
   closeModel: () => void;

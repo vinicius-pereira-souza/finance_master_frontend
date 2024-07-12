@@ -1,39 +1,41 @@
 import { Link } from "react-router-dom";
 // components
-import Input from "../components/form/input";
-import BtnSubmit from "../components/form/btnSubmit";
+import Input from "../components/form/Input";
+import BtnSubmit from "../components/form/Submit";
 
 const Register = () => {
   return (
-    <div className="max-w-[400px] mx-auto">
-      <h1 className="text-center text-[25px] mb-11">Cadastre-se</h1>
+    <div className="w-full lg:max-w-[400px] mx-auto">
+      <h1 className="text-center text-xl lg:text-2xl mb-10 lg:mb-11">
+        Cadastre-se
+      </h1>
       <form>
         <Input
-          styles="mb-[25px]"
+          styles="mb-4 lg:mb-[25px]"
           type="text"
           name="name"
-          textLabel="Nome"
+          labelText="Nome"
           placeholder="Digite seu nome"
         />
         <Input
-          styles="mb-[25px]"
+          styles="mb-4 lg:mb-[25px]"
           type="email"
           name="email"
-          textLabel="E-mail"
+          labelText="E-mail"
           placeholder="Digite seu endereço de email"
         />
         <Input
-          styles="mb-[25px]"
+          styles="mb-4 lg:mb-[25px]"
           type="password"
           name="password"
-          textLabel="Senha"
+          labelText="Senha"
           placeholder="Digite sua senha"
         />
         <Input
-          styles="mb-[25px]"
+          styles="mb-10 lg:mb-[25px]"
           type="password"
           name="confirmpassword"
-          textLabel="confirmpassword"
+          labelText="confirmpassword"
           placeholder="Confirme sua senha"
         />
         <BtnSubmit text="cadastrar" />

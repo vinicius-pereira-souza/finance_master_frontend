@@ -1,5 +1,5 @@
 // components
-import Title from "../components/template/title";
+import Title from "../components/template/Title";
 
 const Transections = () => {
   return (

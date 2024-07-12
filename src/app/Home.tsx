@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 // components
-import Title from "../components/template/title";
-import Card from "../components/home/card";
-import ListTitle from "../components/template/listTitles";
-import Item from "../components/template/item";
-import Modal from "../components/home/modal";
+import Title from "../components/template/Title";
+import Card from "../components/home/Card";
+import ListTitle from "../components/template/ListTitles";
+import Item from "../components/template/Item";
+import Modal from "../components/home/Modal";
 
 // icons
 import { LuWallet, LuArrowDown, LuArrowUp, LuPlus } from "react-icons/lu";
