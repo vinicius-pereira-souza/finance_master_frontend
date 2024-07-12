@@ -27,6 +27,14 @@ export default {
       fontFamily: {
         archivo: ["Archivo", "sans-serif"],
       },
+      maxWidth: {
+        tablet: "720px",
+        desktop: "1096px",
+      },
+      height: {
+        268: "268px",
+        navbar_mobile: "calc(100vh - 61px)",
+      },
     },
   },
   plugins: [],

@@ -3,12 +3,24 @@
 @tailwind utilities;
 
 @layer components {
-  .container_center {
-    @apply max-w-[1096px] mx-auto;
+  .container_center_tablet {
+    @apply max-w-720 mx-auto;
+  }
+
+  .container_center_desktop {
+    @apply max-w-1096 mx-auto;
   }
 
   .span_title {
-    @apply block px-3 border-r-[1px] border-r-gray-72;
+    @apply block px-3 border-r border-r-gray-72;
+  }
+
+  .link_mobile {
+    @apply block py-3 border-b text-gray-690 border-b-blue-945;
+  }
+
+  .active_link_mobile {
+    @apply block py-3 bg-purple-810 text-white font-bold;
   }
 }
 

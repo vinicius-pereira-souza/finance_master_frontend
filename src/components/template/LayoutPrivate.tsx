@@ -1,51 +1,47 @@
-import { Outlet, NavLink, Link } from "react-router-dom";
-import img from "../../assets/imagem-de-usuario.png";
+import { Outlet, Link } from "react-router-dom";
+import { LuMenu } from "react-icons/lu";
+import { useState } from "react";
+
+// components
+import Navlink from "./NavLink";
+import UserAvatar from "./UserAvatar";
 
 const LayoutPrivate = () => {
+  const [openNavbar, setOpenNavBar] = useState<boolean>(true);
+
+  const toggleOpenNavbar = () => {
+    setOpenNavBar(!openNavbar);
+  };
+
   return (
-    <main className="relative">
-      <div className="absolute top-0 left-0 w-full h-[268px] bg-blue-980 z-[-10]"></div>
-      <header className="border-b-[1px] border-b-blue-945 mb-9">
-        <nav className="container_center py-4 flex items-center justify-between">
-          <div className="flex items-center gap-[50px]">
-            <Link to="/" className="text-lg text-white">
-              finance<span className="font-bold">Master</span>
-            </Link>
-            <ul className="flex items-center">
-              <li>
-                <NavLink to="/" className={`py-[6px] px-3 text-gray-690`}>
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/transections"
-                  className="py-[6px] px-3 text-gray-690"
-                >
-                  Transações
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/profile" className="py-[6px] px-3 text-gray-690">
-                  Perfil
-                </NavLink>
-              </li>
+    <main>
+      <div className="absolute top-0 left-0 w-full h-268 bg-blue-980 -z-10"></div>
+      <header className="relative p-4 sm:py-[14px] sm:px-0 border-b border-b-blue-945">
+        <div className="flex items-center justify-between mx-auto sm:max-w-tablet lg:max-w-desktop ">
+          <Link to="/" className="text-lg text-white">
+            finance<span className="font-bold">Master</span>
+          </Link>
+          <nav
+            className={`sm:visible ${
+              openNavbar ? "invisible opacity-0" : "visible opacity-[1]"
+            }  transition-all absolute sm:relative top-[61px] mx-auto sm:top-0 left-0 flex-col sm:flex-row  sm:flex-1 flex sm:flex items-center justify-between w-full sm:w-auto bg-blue-980 sm:bg-none h-navbar_mobile sm:h-auto sm:opacity-100 sm:visible`}
+          >
+            <ul className="sm:flex items-center sm:ml-[50px] w-full sm:w-auto">
+              <Navlink to="/" text="Home" />
+              <Navlink to="/transections" text="Transações" />
+              <Navlink to="/profile" text="Perfil" />
             </ul>
-          </div>
-          <div className="flex items-center gap-[10px]">
-            <div className="flex flex-col gap-1 text-right">
-              <span className="block text-white text-base leading-none">
-                Vinicius
-              </span>
-              <p className="text-base  text-gray-690 text-[13px] leading-none">
-                vinicius.pereira.souza@gmail.com
-              </p>
-            </div>
-            <img className="w-9 h-9" src={img} alt="user image" />
-          </div>
-        </nav>
+            <UserAvatar styles="text-left sm:text-right sm:ml-auto ms:flex-1 gap-[10px] flex-row-reverse sm:flex-row w-full sm:w-auto p-4 sm:px-0" />
+          </nav>
+          <button
+            onClick={toggleOpenNavbar}
+            className="block sm:hidden text-2xl text-white"
+          >
+            <LuMenu />
+          </button>
+        </div>
       </header>
-      <div className="container_center">
+      <div className="px-4 sm:max-w-tablet lg:max-w-desktop mx-auto">
         <Outlet />
       </div>
     </main>
