@@ -2,7 +2,7 @@ type Props = {
   text: string;
 };
 
-const BtnSubmit = ({ text }: Props) => {
+const Submit = ({ text }: Props) => {
   return (
     <button
       type="submit"
@@ -13,4 +13,4 @@ const BtnSubmit = ({ text }: Props) => {
   );
 };
 
-export default BtnSubmit;
+export default Submit;
