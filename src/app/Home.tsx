@@ -87,7 +87,7 @@ const Home = () => {
           className="text-white bg-purple-550 hover:bg-purple-810 
         transition-all rounded-lg text-20 p-2 lg:text-base sm:p-4 flex items-center gap-3"
         >
-          <LuPlus /> <span className="hidden ms:block">Adicionar</span>
+          <LuPlus /> <span className="hidden sm:block">Adicionar</span>
         </button>
       </div>
       <div className="bg-white rounded-[10px] shadow-bsh-card">

@@ -39,7 +39,7 @@ export default {
       },
       height: {
         268: "268px",
-        navbar_mobile: "calc(100vh - 61px)",
+        navbar_mobile: "calc(100vh - 60px)",
       },
     },
   },

@@ -16,7 +16,9 @@ const LayoutPrivate = () => {
   return (
     <main>
       <div className="absolute top-0 left-0 w-full h-268 bg-blue-980 -z-10"></div>
-      <header className={`p-4 sm:py-[14px] sm:px-0 border-b border-b-blue-945`}>
+      <header
+        className={`sticky top-0 sm:relative bg-blue-980 p-4 sm:py-[14px] sm:px-0 border-b border-b-blue-945`}
+      >
         <div className="flex items-center justify-between mx-auto sm:max-w-tablet lg:max-w-desktop ">
           <Link to="/" className="text-lg text-white">
             finance<span className="font-bold">Master</span>
